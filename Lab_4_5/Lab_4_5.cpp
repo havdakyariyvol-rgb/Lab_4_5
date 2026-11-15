@@ -30,8 +30,9 @@ int main()
 			break;
 		}
 
-		if (((x <= 0) && (y >= 0) && (x * x + y * y <= R * R)) ||
-			((y <= 0) && (y >= -2 * x) && (y >= 2 * x - 2 * R)))
+		if (x >= -R && x <= R && y >= -R && y <= R &&
+			((x + R) * (x + R) + (y - R) * (y - R) >= R * R) &&
+			((x - R) * (x - R) + (y + R) * (y + R) >= R * R))
 			cout << "Влучання!" << endl;
 		else
 			cout << "Промах!" << endl;
@@ -52,8 +53,9 @@ int main()
 			continue;
 		}
 
-		if (((x <= 0) && (y >= 0) && (x * x + y * y <= R * R)) ||
-			((y <= 0) && (y >= -2 * x) && (y >= 2 * x - 2 * R)))
+		if (x >= -R && x <= R && y >= -R && y <= R &&
+			((x + R) * (x + R) + (y - R) * (y - R) >= R * R) &&
+			((x - R) * (x - R) + (y + R) * (y + R) >= R * R))
 			cout << "Влучання!" << endl;
 		else
 			cout << "Промах!" << endl;
